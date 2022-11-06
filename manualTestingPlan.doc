@@ -24,6 +24,9 @@ Exit Criteria
 
  /////////////////////////////////////////////////////////////////////////
  EXPLORATORY TESTING:
+ Explored the app for 15 minutes as a user clicking on all buttons and dueling several times. 
+
+ Results:
  - "See all bots" does NOT display bots. *** FAIL
  - "Draw" displays bots correctly. 
  - You can add two bots to the duel. 
@@ -47,7 +50,7 @@ Unable to see all of the bots. Steps to reproduce:
 
  Environment:
  - Running chrome version 8.15.0
- - macos Ventura 13.0
+ - macOs Ventura 13.0
 
  (see Screenshot-bug1.png)
 
