@@ -1,0 +1,82 @@
+PLAN OVERVIEW:
+Test the functionality of the Duel Duo app. 
+
+Test Criteria:
+- Test that the "see all bots" button works. 
+- Test that when you click "draw" the bots display. 
+- Test that you can add two bots to the duel. 
+- Test that you can remove bots from the duel. 
+- Test that you can't add more than two bots to the duel. 
+- Test that the duel button works. 
+- Test that the losses are recorded. 
+- Displays win/lose notification once the duel is complete. 
+- Test that the wins are recorded. 
+- Fails are recorded on the scoreboard. 
+- Test that the winner is calculated by adding each Duo’s total health and total attack damage up and then subtracting all of the opposition’s attack from the defender’s health.
+- When you refresh the scoreboard clears. 
+
+Entry Criteria:
+- Test criteria provided in duelDuo.test.ts and functions.test.ts
+- Running chromedriver for provided testing. 
+
+Exit Criteria
+- All high priority tests must pass
+
+ /////////////////////////////////////////////////////////////////////////
+ EXPLORATORY TESTING:
+ - "See all bots" does NOT display bots. *** FAIL
+ - "Draw" displays bots correctly. 
+ - You can add two bots to the duel. 
+ - You can remove bots from the duel. 
+ - An alert appears if you try to add a third bot. 
+ - The duel button works properly.
+ - User is notified of wins/losses.  
+ - Wins are NOT recorded. *** FAIL
+ - Fails are recorded on the scoreboard. 
+ - The winner appears to be calculated correctly. 
+ - When you refresh the scoreboard clears. *** FAIL
+
+///////////////////////////////////////////////////////////////////////////
+BUG REPORT #1:
+Unable to see all of the bots. Steps to reproduce:
+ 1. Nagivate to the application. 
+ 2. Click on "See all bots"
+
+ Expected result:
+ - Should display all of the bots. 
+
+ Environment:
+ - Running chrome version 8.15.0
+ - macos Ventura 13.0
+
+ (see Screenshot-bug1.png)
+
+BUG REPORT #2:
+Wins are not recorded in the scoreboard. Steps to reproduce:
+1. Nagivate to the game. 
+2. Click "draw".
+3. Select the two bots with the highest health and attack damage. 
+4. Click "Duel!"
+5. If you win and receive alert stating that you've won the match, click "Play again" and look at the scoreboard.
+6. If not, repeat steps 2-4 until you win. Then, click "play again". 
+
+ Environment:
+ - Running chrome version 8.15.0
+ - macos Ventura 13.0
+
+(see Screenshot-bug2-1.png and Screenshot-bug2-2.png)
+
+BUG REPORT #3
+The scoreboard does not restart once the page is refreshed. 
+Steps to reproduce:
+1. Nagivate to the game. 
+2. Click "draw".
+3. Select the two bots with the highest health and attack damage. 
+4. Click "Duel!"
+5. Once the score appears, refresh the page. 
+
+ Environment:
+ - Running chrome version 8.15.0
+ - macos Ventura 13.0
+
+(see Screenshot-bug3.png)
